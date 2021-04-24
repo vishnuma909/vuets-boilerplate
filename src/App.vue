@@ -5,15 +5,21 @@
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts">
+import {Component, Vue} from 'vue-property-decorator'
+import HelloWorld from './HelloWorld.vue'
 
-export default {
-  name: 'App',
+@Component({
   components: {
-    HelloWorld
+    HelloWorld,
+  }
+})
+class App extends Vue {
+  getUserName = (): string => {
+    return "MyVueJs"
   }
 }
+export default App;
 </script>
 
 <style>
