@@ -1,25 +1,20 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Lambda"/>
   </div>
 </template>
 
 <script lang="ts">
-import {Component, Vue} from 'vue-property-decorator'
-import HelloWorld from './HelloWorld.vue'
+import { Component, Vue } from 'vue-property-decorator';
+import HelloWorld from './components/HelloWorld.vue';
 
 @Component({
   components: {
     HelloWorld,
-  }
+  },
 })
-class App extends Vue {
-  getUserName = (): string => {
-    return "MyVueJs"
-  }
-}
-export default App;
+export default class App extends Vue {}
 </script>
 
 <style>
