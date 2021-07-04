@@ -1,13 +1,19 @@
 {
-  "name": "my-vue",
+  "name": "my-vue-ts",
   "version": "0.1.0",
   "private": true,
+  "author": "Vishnu Mahesh Chittoju",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "start": "vue-cli-service serve"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vishnuma909/my-vue.git"
+  },
+  "main": "./src/main.ts",
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.0",
