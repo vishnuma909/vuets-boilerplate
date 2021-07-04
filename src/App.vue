@@ -9,20 +9,17 @@
 
     <!-- `view` is a string maintained in script class which is appended here to pass as prop
     `:msg` is binding prop which needs to be used at receiving end with `@Prop() msg` -->
-    <router-view :msg='view'></router-view>
+    <router-view></router-view>
     
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Vue } from 'vue-property-decorator';
 
-@Component
 export default class App extends Vue {
-  view: string = 'Home';
   created() {
     console.log((window as Window)?.performance?.now());
-    console.log(`Vue Version: ${Vue.version}`);
   }
 }
 </script>

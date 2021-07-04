@@ -6,13 +6,13 @@
         class="card-view"
     >
         <v-card-title id="cardTitle">
-            {{'title'}}
+            {{cardData.movieName}}
         </v-card-title>
         <v-card-subtitle id="cardSubtitle">
-            {{'sub title'}}
+            {{cardData.movieSubTitle}}
         </v-card-subtitle>
         <v-card-text id="cardText">
-            {{'Rangamma Rangamma em pilladu, pattinchukodu anthe aipoindi po'}}
+            {{cardData.movieDescription}}
         </v-card-text>
         <v-card-actions>
             <v-btn
@@ -26,18 +26,22 @@
     </v-card>
 </template>
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { defineComponent, ref } from '@vue/composition-api';
+import { CardViewData } from './CardViewTypes';
 
-@Component
-export default class CardView extends Vue {
-    // setup() {
-    //     const title: string = ref('VUE')
-    //     return {
-    //         title,
-
-    //     }
-    // }
-}
+export default defineComponent({
+    name: 'CardView',
+    props: {
+        type: Object,
+        cardData: {},
+    },
+    setup(props: any) {
+        const cardData: CardViewData = ref(props.cardData);
+        return {
+            cardData
+        };
+    },
+});
 </script>
 
 <style lang="scss" scoped>

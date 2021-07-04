@@ -5,7 +5,6 @@ This folder includes as follows
 
 # component names
 1. Dashboard
-    # This file is structured by dividing files according to the extensions, to maintain code readability.
     # TODO: [explain why you are using this]
     # TODO: [what are the props that are passed to components][write None if no props are passed]
     # TODO: [expected result from component]
@@ -18,6 +17,7 @@ This folder includes as follows
 
 2. CardView
     # This file is used as child component and plugged in Home.vue
+    # This file has composition api included
     # TODO: [explain why you are using this]
     # TODO: [what are the props that are passed to components][write None if no props are passed]
     # TODO: [expected result from component]
